@@ -7,8 +7,8 @@ import Navbar from "@/components/ui/Navbar"; // Import de la navbar
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio Développeur",
-  description: "Portfolio de développeur React & Next.js",
+  title: "Portfolio Djuikem Cynthia",
+  description: "Portfolio",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
           {children} {/* Contenu de la page */}
         </main>
         <footer className="py-8 text-center text-slate-400 text-sm">
-          © 2026 - Fait avec Next.js
+          © 2026 Djuikem Cynthia. Tous droits réservés.
         </footer>
       </body>
     </html>
