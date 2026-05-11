@@ -24,7 +24,7 @@ export const PORTFOLIO_DATA = {
       title: "Diagnostic Médical par IA (Mémoire)",
       description: "Comparaison SVM vs Deep Learning (CNN, LSTM, GRU) pour améliorer la précision diagnostique sur des données médicales.",
       tech: ["Python", "TensorFlow/Keras", "Scikit-learn", "Statistiques"],
-      github: "https://github.com/Djuikem",
+      github: "https://github.com/Djuikem/Master_Thesis_AIMS",
       pdf: "/docs/Master_Thesis_Djuikem_Cynthia.pdf",
     },
     {
