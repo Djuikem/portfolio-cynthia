@@ -1,19 +1,16 @@
 @import "tailwindcss";
 
-/* 🎨 Rendu de couleur cohérent sur tous les appareils */
+/* 🎨 Rendu cohérent & mode clair forcé */
 * {
   color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-/* 🌈 Configuration Tailwind v4 (CSS-native) */
+/* 🌈 Palette professionnelle (Tailwind v4 @theme) */
 @theme {
-  /* Palette professionnelle Data Science */
   --color-primary-50: #eef2ff;
   --color-primary-100: #e0e7ff;
   --color-primary-500: #6366f1;
@@ -36,58 +33,44 @@ html {
   --color-border: #e2e8f0;
   --color-border-soft: #f1f5f9;
 
-  /* Ombres personnalisées */
   --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.04);
   --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.08);
   --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
 
-  /* Dégradés */
   --gradient-hero: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
   --gradient-subtle: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
 }
 
-/* ️ Body global */
 body {
   @apply bg-background text-text-primary antialiased font-sans;
 }
 
-/* 🪄 Classes utilitaires personnalisées */
-@layer components {
-  .card {
-    @apply bg-background-card border border-border rounded-2xl shadow-soft 
-           hover:shadow-elevated hover:border-primary-200 transition-all duration-300;
-  }
-
-  .card-hover {
-    @apply hover:-translate-y-1 hover:shadow-glow transition-all duration-300;
-  }
-
-  .btn-primary {
-    @apply bg-primary-600 text-white px-6 py-3 rounded-xl font-medium 
-           hover:bg-primary-700 hover:shadow-lg active:scale-95 transition-all duration-200;
-  }
-
-  .btn-secondary {
-    @apply bg-white text-text-primary border border-border px-6 py-3 rounded-xl font-medium 
-           hover:bg-primary-50 hover:border-primary-300 hover:text-primary-700 
-           active:scale-95 transition-all duration-200;
-  }
-
-  .badge {
-    @apply px-3 py-1.5 bg-primary-50 text-primary-700 text-sm font-medium 
-           rounded-lg border border-primary-100 hover:bg-primary-100 transition-colors duration-200;
-  }
-
-  .link-hover {
-    @apply relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 
-           after:h-0.5 after:w-0 after:bg-primary-600 after:transition-all after:duration-300 
-           hover:after:w-full;
-  }
+/* 🪄 Classes utilitaires (déclarées en CSS standard pour éviter les conflits de build) */
+.card {
+  @apply bg-background-card border border-border rounded-2xl shadow-soft transition-all duration-300;
+}
+.card:hover {
+  @apply shadow-elevated border-primary-200 -translate-y-1;
 }
 
-/* 📱 Optimisation mobile */
-@media (max-width: 640px) {
-  .container {
-    @apply px-4;
-  }
+.btn-primary {
+  @apply bg-primary-600 text-white px-6 py-3 rounded-xl font-medium shadow-sm 
+         hover:bg-primary-700 hover:shadow-lg active:scale-95 transition-all duration-200;
+}
+
+.btn-secondary {
+  @apply bg-white text-text-primary border border-border px-6 py-3 rounded-xl font-medium 
+         hover:bg-primary-50 hover:border-primary-300 hover:text-primary-700 
+         active:scale-95 transition-all duration-200;
+}
+
+.badge {
+  @apply px-3 py-1.5 bg-primary-50 text-primary-700 text-sm font-medium 
+         rounded-lg border border-primary-100 hover:bg-primary-100 transition-colors duration-200;
+}
+
+.link-hover {
+  @apply relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 
+         after:h-0.5 after:w-0 after:bg-primary-600 after:transition-all after:duration-300 
+         hover:after:w-full;
 }
