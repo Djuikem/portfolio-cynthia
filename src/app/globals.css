@@ -9,34 +9,54 @@
 
 html { scroll-behavior: smooth; }
 
-/* 🌈 Palette professionnelle (Tailwind v4 @theme) */
+/* 🌈 Palette professionnelle complète (Tailwind v4 @theme) */
 @theme {
+  /* Primary - Indigo (toutes les nuances) */
   --color-primary-50: #eef2ff;
   --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;  /* 👈 Ajouté */
+  --color-primary-300: #a5b4fc;  /* 👈 Ajouté */
+  --color-primary-400: #818cf8;  /* 👈 Ajouté */
   --color-primary-500: #6366f1;
   --color-primary-600: #4f46e5;
   --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;  /* 👈 Ajouté */
+  --color-primary-900: #312e81;  /* 👈 Ajouté */
 
+  /* Secondary - Violet */
+  --color-secondary-50: #f5f3ff;
+  --color-secondary-100: #ede9fe;
+  --color-secondary-200: #ddd6fe;
   --color-secondary-500: #8b5cf6;
   --color-secondary-600: #7c3aed;
+  --color-secondary-700: #6d28d9;
 
+  /* Accent - Orange/Coral */
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffedd5;
   --color-accent-500: #f97316;
   --color-accent-600: #ea580c;
+  --color-accent-700: #c2410c;
 
+  /* Backgrounds */
   --color-background: #fafafa;
   --color-background-card: #ffffff;
 
+  /* Text */
   --color-text-primary: #1e293b;
   --color-text-secondary: #64748b;
   --color-text-muted: #94a3b8;
 
+  /* Borders */
   --color-border: #e2e8f0;
   --color-border-soft: #f1f5f9;
 
+  /* Shadows */
   --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.04);
   --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.08);
   --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.15);
 
+  /* Gradients */
   --gradient-hero: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
   --gradient-subtle: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
 }
@@ -45,12 +65,12 @@ body {
   @apply bg-background text-text-primary antialiased font-sans;
 }
 
-/* 🪄 Classes utilitaires (déclarées en CSS standard pour éviter les conflits de build) */
+/* 🪄 Classes utilitaires personnalisées */
 .card {
   @apply bg-background-card border border-border rounded-2xl shadow-soft transition-all duration-300;
 }
 .card:hover {
-  @apply shadow-elevated border-primary-200 -translate-y-1;
+  @apply shadow-elevated border-primary-200 -translate-y-1; /* ✅ primary-200 est maintenant défini */
 }
 
 .btn-primary {
