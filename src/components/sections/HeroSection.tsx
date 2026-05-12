@@ -32,7 +32,7 @@ export default function HeroSection() {
             rel="noopener noreferrer"
             className="px-6 py-3 bg-white text-slate-700 border border-slate-300 rounded-lg font-medium hover:bg-slate-50 transition"
           >
-            LinkedIn
+            💼 LinkedIn
           </a>
         </div>
       </div>
