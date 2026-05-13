@@ -17,3 +17,141 @@ body {
   color: #0f172a; /* slate-900 : Texte très sombre et lisible */
   font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
+
+/* 🎬 Animations personnalisées pour le Hero */
+
+/* Gradient animé sur le texte */
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Float des particules */
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.4; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 0.8; }
+}
+.animate-float {
+  animation: float ease-in-out infinite;
+}
+
+/* Pulse lent pour le glow */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Rotation lente de la bordure décorative */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Indicateur de scroll */
+@keyframes scroll-indicator {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(8px); opacity: 0; }
+}
+.animate-scroll-indicator {
+  animation: scroll-indicator 1.5s ease-in-out infinite;
+}
+
+/* 🎬 Animations pour ProjectsSection */
+
+/* Apparition staggered des cartes */
+[data-project-card] {
+  will-change: transform, opacity;
+}
+
+/* Effet de brillance sur les cartes */
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+.group:hover .animate-shine {
+  animation: shine 0.7s ease-out;
+}
+
+/* Hover subtil sur les badges */
+.hover-badge {
+  transition: all 0.2s ease;
+}
+.hover-badge:hover {
+  transform: translateY(-2px);
+}
+
+/* Animation des boutons */
+.group\/btn:hover svg {
+  transition: transform 0.2s ease;
+}
+
+/* =============================================================================
+   🎬 ANIMATIONS SPÉCIFIQUES : About & Skills
+   ============================================================================= */
+
+/* Apparition staggered des éléments de liste */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+/* Barres de progression animées */
+@keyframes progressFill {
+  from { width: 0; }
+  to { width: var(--target-width); }
+}
+.animate-progress {
+  animation: progressFill 1s ease-out forwards;
+}
+
+/* Hover sur les badges de compétences */
+.skill-badge {
+  transition: all 0.2s ease;
+}
+.skill-badge:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Effet de pulse subtil sur les icônes actives */
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.animate-icon-pulse {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+/* Transition fluide pour les onglets */
+.tab-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Effet de focus pour l'accessibilité */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-md);
+}
