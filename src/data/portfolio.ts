@@ -2,7 +2,7 @@ export const PORTFOLIO_DATA = {
   personal: {
     name: "Djuikem Tamogou Cynthia Gaelle",
     role: "Data Scientist & Développeuse IA",
-    bio: "Étudiante en Master IA & Big Data, passionnée par l'analyse de données, le machine learning et la modélisation mathématique. Je transforme des données complexes en insights actionnables et en solutions prédictives fiables.",
+    bio: "Spécialisée en Machine Learning, analyse de données et modélisation mathématique. Je transforme des données complexes en insights actionnables et en solutions prédictives fiables.",
     email: "djuikem.t.c.gaelle@aims-senegal.org",
     phone: "+221 77 616 29 25",
     github: "https://github.com/Djuikem",

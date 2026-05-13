@@ -1,5 +1,6 @@
 // src/components/sections/HeroSection.tsx
 import Image from "next/image";
+import { ArrowRight, Linkedin } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 
 export default function HeroSection() {
@@ -12,28 +13,45 @@ export default function HeroSection() {
         <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold">
           Bienvenue sur mon portfolio
         </span>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
           Je me nomme <br />
-          <span className="text-blue-600">{personal.name}</span>
-        </h1>
+          <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600 bg-clip-text text-transparent">{personal.name}</span>
+        </h2>
+
+        {/* Rôle / Titre professionnel */}
+        <p className="text-lg sm:text-xl text-indigo-700 font-medium">
+        Data Scientist & Étudiante en IA • Big Data
+        </p>
+
         <p className="text-lg text-slate-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
           {personal.bio}
         </p>
-        <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
-          <a 
+
+        {/* Boutons d'action */}
+        <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
+        <a 
             href="#projects" 
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition shadow-sm"
-          >
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+        >
             Voir mes projets
-          </a>
-          <a 
+            <ArrowRight size={18} />
+        </a>
+        <a 
             href={personal.linkedin} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-white text-slate-700 border border-slate-300 rounded-lg font-medium hover:bg-slate-50 transition"
-          >
-            💼 LinkedIn
-          </a>
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-slate-700 border border-slate-200 rounded-xl font-medium hover:border-indigo-300 hover:text-indigo-600 hover:shadow-md transition-all duration-300"
+        >
+            <Linkedin size={18} /> LinkedIn
+        </a>
+        </div>
+
+        <div className="flex flex-wrap justify-center md:justify-start gap-2 pt-4">
+            {["Python", "TensorFlow", "Big Data", "EDA"].map((skill) => (
+              <span key={skill} className="px-3 py-1.5 bg-slate-100 text-slate-700 text-xs font-medium rounded-lg border border-slate-200">
+                {skill}
+              </span>
+            ))}
         </div>
       </div>
 
