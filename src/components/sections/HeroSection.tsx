@@ -114,7 +114,7 @@ export default function HeroSection() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
             <span className="block">Salut, je suis</span>
             <span className="block mt-1 bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-700 bg-clip-text text-transparent animate-gradient">
-              Cynthia Djuikem
+               Djuikem Tamogou Cynthia Gaelle
             </span>
           </h1>
           
