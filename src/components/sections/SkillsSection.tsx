@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Code2, Database, Brain, ChartBar, GitBranch, Terminal, Sparkles } from 'lucide-react';
+import { Code2, Database, Brain, ChartBar, GitBranch, Terminal, Sparkles, Lightbulb } from 'lucide-react';
 
 // Mapping des couleurs pour les barres de progression (évite les erreurs CSS variables)
 const PROGRESS_COLORS: Record<string, string> = {
@@ -214,9 +214,12 @@ export default function SkillsSection() {
 
         {/* Note contextuelle */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-slate-500 italic">
-            💡 Les niveaux reflètent mon expérience pratique sur des projets concrets. 
-            Je suis en apprentissage continu et toujours ouverte à découvrir de nouvelles technologies !
+          <p className="text-sm text-slate-500 italic flex items-start gap-2">
+            <Lightbulb size={14} className="text-amber-500 flex-shrink-0 mt-0.5" />
+            <span>
+                Les niveaux reflètent mon expérience pratique sur des projets concrets. 
+                Je suis en apprentissage continu et toujours ouverte à découvrir de nouvelles technologies !
+            </span>
           </p>
         </div>
       </div>
