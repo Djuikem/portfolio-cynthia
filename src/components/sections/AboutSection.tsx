@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { GraduationCap, Globe, Mail, Phone, MapPin, Calendar, Award, BookOpen } from 'lucide-react';
+import { GraduationCap, Globe, Mail, Phone, MapPin, Calendar, Award, BookOpen, Target } from 'lucide-react';
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 
 export default function AboutSection() {
@@ -105,7 +105,11 @@ export default function AboutSection() {
 
             {/* 🎯 Objectifs professionnels */}
             <div className="bg-gradient-to-br from-indigo-50 to-violet-50 p-6 rounded-2xl border border-indigo-100">
-              <h4 className="font-semibold text-slate-800 mb-3">🎯 Objectifs</h4>
+              {/* <h4 className="font-semibold text-slate-800 mb-3">🎯 Objectifs</h4> */}
+              <h4 className="font-semibold text-slate-800 mb-3 flex items-center gap-2">
+                <Target size={18} className="text-indigo-600" />
+                Objectifs
+               </h4>
               <ul className="space-y-2 text-sm text-slate-600">
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0" />
